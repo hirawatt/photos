@@ -14,6 +14,7 @@ import FooterClient from '@/site/FooterClient';
 import NavClient from '@/site/NavClient';
 import CommandK from '@/site/CommandK';
 import { ThemeProvider } from 'next-themes';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '../site/globals.css';
 import '../site/sonner.css';
@@ -74,6 +75,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={ibmPlexMono.variable}>
+      <SpeedInsights />
         <AppStateProvider>
           <ThemeProvider attribute="class">
             <main className={clsx(
